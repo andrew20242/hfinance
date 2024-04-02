@@ -31,10 +31,12 @@ Calculates on each past months incomes\outcomes\delta\total of all personal acco
 
 ### Report Income details
 Calculates on each past month income by source
+(+chart)
 For example: job1, job2, income from deposit1
 
 ### Report Income details
 Calculates on each past month outcome by destination
+(+chart)
 For example: clothing, housing, sport, foods, vehicle
 
 # Use case:
