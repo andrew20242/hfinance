@@ -5,6 +5,7 @@ import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
+import com.reddit.hfs.hfinance.dto.AccountDto;
 import com.reddit.hfs.hfinance.entity.Account;
 import com.reddit.hfs.hfinance.repository.AccountRepository;
 import com.reddit.hfs.hfinance.service.exception.AccountException;
@@ -22,10 +23,9 @@ public class AccountService {
 		return accountRepository.findAll();
 	}
 	
-	public Account createOne(Account account) {
-		Account accountCreated = accountRepository.save(
-				new Account(account.getName(), account.getType())
-				);
+	public Account createOne(AccountDto accountDto) {
+		Account account = new Account(accountDto.getName(), accountDto.getType());
+		Account accountCreated = accountRepository.save(account);
 		return accountCreated;
 	}
 	

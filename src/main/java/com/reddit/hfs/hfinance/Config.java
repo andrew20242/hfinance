@@ -11,13 +11,14 @@ import com.reddit.hfs.hfinance.repository.AccountRepository;
 
 @Configuration
 public class Config {
-	private static final Logger log = LoggerFactory.getLogger(Config.class);
+	//private static final Logger log = LoggerFactory.getLogger(Config.class);
 	
 	@Bean
 	CommandLineRunner initDatabase( AccountRepository accountRepository) {
 		
 		CommandLineRunner cr = 
 			args -> {
+				/*
 				accountRepository.save(new Account("Freelance","income"));
 				accountRepository.save(new Account("Food","outcome"));
 				accountRepository.save(new Account("bank card A","both"));
@@ -25,6 +26,7 @@ public class Config {
 				accountRepository.save(new Account("Sport","outcome"));
 				
 				accountRepository.findAll().stream().forEach(a->log.info("init: " + a.toString()));
+				*/
 			};
 		return cr;
 	}

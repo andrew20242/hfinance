@@ -42,8 +42,7 @@ public class AccountCtrl {
 		@RequestBody AccountDto accountDto
 	) {
 		try {
-			Account account = new Account(accountDto.getName(), accountDto.getType());
-			Account accountCreated = accountService.createOne(account);
+			Account accountCreated = accountService.createOne(accountDto);
 			return new ResponseEntity<>(accountCreated, HttpStatus.CREATED);
 		} catch (Exception e) {
 			return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);

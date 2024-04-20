@@ -1,5 +1,6 @@
 2024-04-20
 - sqlite database
+- use flyway for database upgrade
 
 2024-04-19
 
